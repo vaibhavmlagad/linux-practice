@@ -1,0 +1,330 @@
+[cloud_user@93d7e4261e1c Shell-scripting]$ ll
+total 8
+-r-x-w---x. 1 cloud_user cloud_user 164 May 17 22:32 first-shell-script.sh
+-rwxrwxrwx. 1 cloud_user cloud_user 488 May 17 22:55 nodeHealth.sh
+-rw-rw-r--. 1 cloud_user cloud_user   0 May 17 21:25 scripts.txt
+drwxrwxr-x. 2 cloud_user cloud_user  23 May 17 22:25 vaibhav_test
+[cloud_user@93d7e4261e1c Shell-scripting]$ vi test
+[cloud_user@93d7e4261e1c Shell-scripting]$ 
+[cloud_user@93d7e4261e1c Shell-scripting]$ grep Vaibhav test | awk -F" " '{print $4}'
+Vaibhav
+[cloud_user@93d7e4261e1c Shell-scripting]$ ps -ef
+UID        PID  PPID  C STIME TTY          TIME CMD
+root         1     0  0 21:10 ?        00:00:07 /usr/lib/systemd/systemd --switched-root --system --deserialize 22
+root         2     0  0 21:10 ?        00:00:00 [kthreadd]
+root         4     2  0 21:10 ?        00:00:00 [kworker/0:0H]
+root         6     2  0 21:10 ?        00:00:00 [ksoftirqd/0]
+root         7     2  0 21:10 ?        00:00:00 [migration/0]
+root         8     2  0 21:10 ?        00:00:00 [rcu_bh]
+root         9     2  0 21:10 ?        00:00:01 [rcu_sched]
+root        10     2  0 21:10 ?        00:00:00 [lru-add-drain]
+root        11     2  0 21:10 ?        00:00:00 [watchdog/0]
+root        12     2  0 21:10 ?        00:00:00 [watchdog/1]
+root        13     2  0 21:10 ?        00:00:00 [migration/1]
+root        14     2  0 21:10 ?        00:00:00 [ksoftirqd/1]
+root        16     2  0 21:10 ?        00:00:00 [kworker/1:0H]
+root        18     2  0 21:10 ?        00:00:00 [kdevtmpfs]
+root        19     2  0 21:10 ?        00:00:00 [netns]
+root        20     2  0 21:10 ?        00:00:00 [khungtaskd]
+root        21     2  0 21:10 ?        00:00:00 [writeback]
+root        22     2  0 21:10 ?        00:00:00 [kintegrityd]
+root        23     2  0 21:10 ?        00:00:00 [bioset]
+root        24     2  0 21:10 ?        00:00:00 [bioset]
+root        25     2  0 21:10 ?        00:00:00 [bioset]
+root        26     2  0 21:10 ?        00:00:00 [kblockd]
+root        27     2  0 21:10 ?        00:00:00 [md]
+root        28     2  0 21:10 ?        00:00:00 [edac-poller]
+root        29     2  0 21:10 ?        00:00:00 [watchdogd]
+root        35     2  0 21:10 ?        00:00:00 [kswapd0]
+root        36     2  0 21:10 ?        00:00:00 [ksmd]
+root        37     2  0 21:10 ?        00:00:00 [khugepaged]
+root        38     2  0 21:10 ?        00:00:00 [crypto]
+root        46     2  0 21:10 ?        00:00:00 [kthrotld]
+root        48     2  0 21:10 ?        00:00:00 [kmpath_rdacd]
+root        49     2  0 21:10 ?        00:00:00 [kaluad]
+root        51     2  0 21:10 ?        00:00:00 [kpsmoused]
+root        53     2  0 21:10 ?        00:00:00 [ipv6_addrconf]
+root        66     2  0 21:10 ?        00:00:00 [deferwq]
+root       214     2  0 21:10 ?        00:00:00 [kauditd]
+root       321     2  0 21:10 ?        00:00:00 [nvme-wq]
+root       322     2  0 21:10 ?        00:00:00 [ena]
+root       324     2  0 21:10 ?        00:00:00 [nvme-reset-wq]
+root       326     2  0 21:10 ?        00:00:00 [nvme-delete-wq]
+root       328     2  0 21:10 ?        00:00:00 [iscsi_eh]
+root       339     2  0 21:10 ?        00:00:00 [kworker/u4:3]
+root       340     2  0 21:10 ?        00:00:00 [kworker/u4:4]
+root       359     2  0 21:10 ?        00:00:00 [bioset]
+root       360     2  0 21:10 ?        00:00:00 [xfsalloc]
+root       361     2  0 21:10 ?        00:00:00 [xfs_mru_cache]
+root       362     2  0 21:10 ?        00:00:00 [xfs-buf/nvme0n1]
+root       363     2  0 21:10 ?        00:00:00 [xfs-data/nvme0n]
+root       364     2  0 21:10 ?        00:00:00 [xfs-conv/nvme0n]
+root       365     2  0 21:10 ?        00:00:00 [xfs-cil/nvme0n1]
+root       366     2  0 21:10 ?        00:00:00 [xfs-reclaim/nvm]
+root       367     2  0 21:10 ?        00:00:00 [xfs-log/nvme0n1]
+root       368     2  0 21:10 ?        00:00:00 [xfs-eofblocks/n]
+root       369     2  0 21:10 ?        00:00:03 [xfsaild/nvme0n1]
+root       370     2  0 21:10 ?        00:00:00 [kworker/0:1H]
+root       371     2  0 21:10 ?        00:00:00 [kworker/1:1H]
+root       472     1  0 21:10 ?        00:00:02 /usr/lib/systemd/systemd-journald
+root       501     1  0 21:10 ?        00:00:00 /usr/sbin/lvmetad -f
+root       509     1  0 21:10 ?        00:00:00 /usr/lib/systemd/systemd-udevd
+root       597     1  0 21:10 ?        00:00:00 /sbin/auditd
+polkitd    622     1  0 21:10 ?        00:00:01 /usr/lib/polkit-1/polkitd --no-debug
+dbus       624     1  0 21:10 ?        00:00:04 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation
+chrony     629     1  0 21:10 ?        00:00:00 /usr/sbin/chronyd
+root       636     1  0 21:10 ?        00:00:00 /usr/sbin/irqbalance --foreground
+root       637     1  0 21:10 ?        00:00:01 /usr/lib/systemd/systemd-logind
+root       713     1  0 21:11 ?        00:00:02 /usr/sbin/NetworkManager --no-daemon
+root       754   713  0 21:11 ?        00:00:00 /sbin/dhclient -d -q -sf /usr/libexec/nm-dhcp-helper -pf /var/run/dhclient-ens5.pid -lf /var/lib/NetworkManroot       977     1  0 21:11 ?        00:00:01 /usr/bin/python2 -Es /usr/sbin/tuned -l -P
+root       979     1  0 21:11 ?        00:00:00 /bin/bash /opt/websh/start-websh.sh
+root       985     1  0 21:11 ?        00:00:00 /usr/bin/rhsmcertd
+root      1017   713  0 21:11 ?        00:00:00 /sbin/dhclient -d -q -6 -N -sf /usr/libexec/nm-dhcp-helper -pf /var/run/dhclient6-ens5.pid -lf /var/lib/Netroot      1103     1  0 21:11 ?        00:00:00 /bin/sh /usr/bin/vncserver_wrapper cloud_user :1
+root      1306     1  0 21:11 ?        00:00:00 /usr/libexec/postfix/master -w
+postfix   1316  1306  0 21:11 ?        00:00:00 qmgr -l -t unix -u
+root      1335     1  0 21:11 ?        00:00:00 /usr/sbin/xrdp-sesman --nodaemon
+root      1336     1  0 21:11 ?        00:00:00 /usr/sbin/xrdp --nodaemon
+root      1339     1  0 21:11 ?        00:00:00 /usr/bin/amazon-ssm-agent
+root      1340     1  0 21:11 ?        00:00:01 /usr/sbin/rsyslogd -n
+root      1344     1  0 21:11 ?        00:00:00 /usr/sbin/sshd -D
+root      1354     1  0 21:11 ?        00:00:01 /usr/sbin/crond -n
+root      1358     1  0 21:11 ?        00:00:00 rhnsd
+root      1373     1  0 21:11 ttyS0    00:00:00 /sbin/agetty --keep-baud 115200,38400,9600 ttyS0 vt220
+root      1374     1  0 21:11 tty1     00:00:00 /sbin/agetty --noclear tty1 linux
+cloud_u+  1510     1  0 21:11 ?        00:00:00 /usr/bin/Xvnc :1 -auth /home/cloud_user/.Xauthority -desktop 93d7e4261e1c.mylabserver.com:1 (cloud_user) -froot      1514  1339  0 21:11 ?        00:00:02 /usr/bin/ssm-agent-worker
+cloud_u+  1531     1  0 21:11 ?        00:00:00 /usr/libexec/gnome-session-binary --session=gnome-classic
+cloud_u+  1545     1  0 21:11 ?        00:00:00 dbus-launch --sh-syntax --exit-with-session
+cloud_u+  1560     1  0 21:11 ?        00:00:00 /usr/bin/dbus-daemon --fork --print-pid 5 --print-address 8 --session
+cloud_u+  1569  1531  0 21:11 ?        00:00:00 /usr/bin/ssh-agent /etc/X11/xinit/Xclients
+cloud_u+  1622     1  0 21:11 ?        00:00:00 /usr/libexec/at-spi-bus-launcher
+cloud_u+  1629  1622  0 21:11 ?        00:00:00 /usr/bin/dbus-daemon --config-file=/usr/share/defaults/at-spi2/accessibility.conf --nofork --print-address 
+cloud_u+  1632     1  0 21:11 ?        00:00:00 /usr/libexec/at-spi2-registryd --use-gnome-session
+cloud_u+  1638     1  0 21:11 ?        00:00:00 /usr/libexec/gvfsd
+root      1665   979  0 21:11 ?        00:00:00 node /opt/websh/node_modules/wetty/index.js --sslkey /opt/websh/ssl/key.pem --sslcert /opt/websh/ssl/cert.pcloud_u+  1726     1  0 21:11 ?        00:00:00 /usr/bin/gnome-keyring-daemon --start --components=secrets
+cloud_u+  1737  1531  0 21:11 ?        00:00:12 /usr/bin/gnome-shell
+root      1743     1  0 21:11 ?        00:00:00 /usr/libexec/upowerd
+cloud_u+  1839     1  0 21:11 ?        00:00:00 /usr/bin/pulseaudio --start --log-target=syslog
+rtkit     1840     1  0 21:11 ?        00:00:00 /usr/libexec/rtkit-daemon
+cloud_u+  1881  1737  0 21:11 ?        00:00:00 ibus-daemon --xim --panel disable
+cloud_u+  1885  1881  0 21:11 ?        00:00:00 /usr/libexec/ibus-dconf
+cloud_u+  1888     1  0 21:11 ?        00:00:00 /usr/libexec/ibus-x11 --kill-daemon
+cloud_u+  1892     1  0 21:11 ?        00:00:00 /usr/libexec/ibus-portal
+cloud_u+  1895     1  0 21:11 ?        00:00:00 /usr/libexec/xdg-permission-store
+cloud_u+  1906     1  0 21:11 ?        00:00:00 /usr/libexec/gnome-shell-calendar-server
+root      1907     1  0 21:11 ?        00:00:00 /usr/libexec/accounts-daemon
+root      1924     1  0 21:11 ?        00:00:00 /usr/libexec/boltd
+cloud_u+  1936     1  0 21:11 ?        00:00:00 /usr/libexec/evolution-source-registry
+root      1940     1  0 21:11 ?        00:00:00 /usr/sbin/wpa_supplicant -u -f /var/log/wpa_supplicant.log -c /etc/wpa_supplicant/wpa_supplicant.conf -P /vcloud_u+  1945     1  0 21:11 ?        00:00:00 /usr/libexec/gvfs-udisks2-volume-monitor
+root      1948     1  0 21:11 ?        00:00:00 /usr/libexec/udisks2/udisksd
+cloud_u+  1951     1  0 21:11 ?        00:00:00 /usr/libexec/goa-daemon
+cloud_u+  1982     1  0 21:11 ?        00:00:00 /usr/libexec/goa-identity-service
+cloud_u+  1990  1531  0 21:11 ?        00:00:00 /usr/libexec/gsd-power
+cloud_u+  1991  1531  0 21:11 ?        00:00:00 /usr/libexec/gsd-print-notifications
+cloud_u+  1993  1531  0 21:11 ?        00:00:00 /usr/libexec/gsd-rfkill
+cloud_u+  1997  1531  0 21:11 ?        00:00:00 /usr/libexec/gsd-screensaver-proxy
+cloud_u+  2002  1531  0 21:11 ?        00:00:01 /usr/libexec/gsd-sharing
+cloud_u+  2006  1531  0 21:11 ?        00:00:00 /usr/libexec/gsd-xsettings
+cloud_u+  2010  1531  0 21:11 ?        00:00:00 /usr/libexec/gsd-wacom
+cloud_u+  2013  1531  0 21:11 ?        00:00:00 /usr/libexec/gsd-smartcard
+cloud_u+  2016  1531  0 21:11 ?        00:00:00 /usr/libexec/gsd-sound
+cloud_u+  2019  1531  0 21:11 ?        00:00:00 /usr/libexec/gsd-account
+cloud_u+  2026  1531  0 21:11 ?        00:00:00 /usr/libexec/gsd-a11y-settings
+cloud_u+  2027  1531  0 21:11 ?        00:00:00 /usr/libexec/gsd-clipboard
+cloud_u+  2030  1531  0 21:11 ?        00:00:00 /usr/libexec/gsd-color
+cloud_u+  2033  1531  0 21:11 ?        00:00:00 /usr/libexec/gsd-datetime
+cloud_u+  2034  1531  0 21:11 ?        00:00:00 /usr/libexec/gsd-housekeeping
+cloud_u+  2037  1531  0 21:11 ?        00:00:00 /usr/libexec/gsd-keyboard
+cloud_u+  2039  1531  0 21:11 ?        00:00:00 /usr/libexec/gsd-media-keys
+cloud_u+  2045  1531  0 21:11 ?        00:00:00 /usr/libexec/gsd-mouse
+cloud_u+  2067     1  0 21:11 ?        00:00:00 /usr/libexec/gsd-printer
+cloud_u+  2086  1531  0 21:11 ?        00:00:00 nautilus-desktop --force
+colord    2099     1  0 21:11 ?        00:00:00 /usr/libexec/colord
+cloud_u+  2105  1638  0 21:11 ?        00:00:00 /usr/libexec/gvfsd-trash --spawner :1.6 /org/gtk/gvfs/exec_spaw/0
+cloud_u+  2131     1  0 21:11 ?        00:00:00 /usr/libexec/evolution-calendar-factory
+cloud_u+  2138  1531  0 21:11 ?        00:00:00 /usr/libexec/tracker-extract
+cloud_u+  2141  1531  0 21:11 ?        00:00:00 /usr/libexec/tracker-miner-apps
+cloud_u+  2147  1531  0 21:11 ?        00:00:00 /usr/libexec/tracker-miner-user-guides
+cloud_u+  2157  1531  0 21:11 ?        00:00:00 /usr/libexec/tracker-miner-fs
+cloud_u+  2170     1  0 21:11 ?        00:00:00 /usr/libexec/tracker-store
+cloud_u+  2188  2131  0 21:11 ?        00:00:00 /usr/libexec/evolution-calendar-factory-subprocess --factory all --bus-name org.gnome.evolution.dataserver.cloud_u+  2201     1  0 21:11 ?        00:00:00 /usr/libexec/dconf-service
+cloud_u+  2202     1  0 21:11 ?        00:00:00 /usr/libexec/evolution-addressbook-factory
+cloud_u+  2221  1881  0 21:11 ?        00:00:00 /usr/libexec/ibus-engine-simple
+cloud_u+  2251  2202  0 21:11 ?        00:00:00 /usr/libexec/evolution-addressbook-factory-subprocess --factory all --bus-name org.gnome.evolution.dataservcloud_u+  2300  1638  0 21:11 ?        00:00:00 /usr/libexec/gvfsd-burn --spawner :1.6 /org/gtk/gvfs/exec_spaw/1
+root      2365  1344  0 21:13 ?        00:00:00 sshd: cloud_user [priv]
+cloud_u+  2382  2365  0 21:13 ?        00:00:00 sshd: cloud_user@pts/0
+cloud_u+  2383  2382  0 21:13 pts/0    00:00:00 -bash
+postfix  11958  1306  0 22:51 ?        00:00:00 pickup -l -t unix -u
+root     12126     2  0 22:54 ?        00:00:00 [kworker/0:1]
+root     12461     2  0 23:00 ?        00:00:00 [kworker/1:2]
+root     12984     2  0 23:11 ?        00:00:00 [kworker/1:0]
+root     13069     2  0 23:12 ?        00:00:00 [kworker/0:2]
+root     13306     2  0 23:16 ?        00:00:00 [kworker/1:1]
+root     13373     2  0 23:18 ?        00:00:00 [kworker/0:0]
+root     13705  1103  0 23:22 ?        00:00:00 sleep 5
+cloud_u+ 13713  2383  0 23:22 pts/0    00:00:00 ps -ef
+[cloud_user@93d7e4261e1c Shell-scripting]$ ps -ef | grep "libexec" | awk -F" " '{print $8}'
+/sbin/dhclient
+/sbin/dhclient
+/usr/libexec/postfix/master
+/usr/libexec/gnome-session-binary
+/usr/libexec/at-spi-bus-launcher
+/usr/libexec/at-spi2-registryd
+/usr/libexec/gvfsd
+/usr/libexec/upowerd
+/usr/libexec/rtkit-daemon
+/usr/libexec/ibus-dconf
+/usr/libexec/ibus-x11
+/usr/libexec/ibus-portal
+/usr/libexec/xdg-permission-store
+/usr/libexec/gnome-shell-calendar-server
+/usr/libexec/accounts-daemon
+/usr/libexec/boltd
+/usr/libexec/evolution-source-registry
+/usr/libexec/gvfs-udisks2-volume-monitor
+/usr/libexec/udisks2/udisksd
+/usr/libexec/goa-daemon
+/usr/libexec/goa-identity-service
+/usr/libexec/gsd-power
+/usr/libexec/gsd-print-notifications
+/usr/libexec/gsd-rfkill
+/usr/libexec/gsd-screensaver-proxy
+/usr/libexec/gsd-sharing
+/usr/libexec/gsd-xsettings
+/usr/libexec/gsd-wacom
+/usr/libexec/gsd-smartcard
+/usr/libexec/gsd-sound
+/usr/libexec/gsd-account
+/usr/libexec/gsd-a11y-settings
+/usr/libexec/gsd-clipboard
+/usr/libexec/gsd-color
+/usr/libexec/gsd-datetime
+/usr/libexec/gsd-housekeeping
+/usr/libexec/gsd-keyboard
+/usr/libexec/gsd-media-keys
+/usr/libexec/gsd-mouse
+/usr/libexec/gsd-printer
+/usr/libexec/colord
+/usr/libexec/gvfsd-trash
+/usr/libexec/evolution-calendar-factory
+/usr/libexec/tracker-extract
+/usr/libexec/tracker-miner-apps
+/usr/libexec/tracker-miner-user-guides
+/usr/libexec/tracker-miner-fs
+/usr/libexec/tracker-store
+/usr/libexec/evolution-calendar-factory-subprocess
+/usr/libexec/dconf-service
+/usr/libexec/evolution-addressbook-factory
+/usr/libexec/ibus-engine-simple
+/usr/libexec/evolution-addressbook-factory-subprocess
+/usr/libexec/gvfsd-burn
+/usr/libexec/nm-dispatcher
+grep
+[cloud_user@93d7e4261e1c Shell-scripting]$ ps -ef | grep "libexec"
+root       754   713  0 21:11 ?        00:00:00 /sbin/dhclient -d -q -sf /usr/libexec/nm-dhcp-helper -pf /var/run/dhclient-ens5.pid -lf /var/lib/NetworkManager/dhclient-8126c120-a964-e959-ff98-ac4973344505-ens5.lease -cf /var/lib/NetworkManager/dhclient-ens5.conf ens5
+root      1017   713  0 21:11 ?        00:00:00 /sbin/dhclient -d -q -6 -N -sf /usr/libexec/nm-dhcp-helper -pf /var/run/dhclient6-ens5.pid -lf /var/lib/NetworkManager/dhclient6-8126c120-a964-e959-ff98-ac4973344505-ens5.lease -cf /var/lib/NetworkManager/dhclient6-ens5.conf ens5
+root      1306     1  0 21:11 ?        00:00:00 /usr/libexec/postfix/master -w
+cloud_u+  1531     1  0 21:11 ?        00:00:00 /usr/libexec/gnome-session-binary --session=gnome-classic
+cloud_u+  1622     1  0 21:11 ?        00:00:00 /usr/libexec/at-spi-bus-launcher
+cloud_u+  1632     1  0 21:11 ?        00:00:00 /usr/libexec/at-spi2-registryd --use-gnome-session
+cloud_u+  1638     1  0 21:11 ?        00:00:00 /usr/libexec/gvfsd
+root      1743     1  0 21:11 ?        00:00:00 /usr/libexec/upowerd
+rtkit     1840     1  0 21:11 ?        00:00:00 /usr/libexec/rtkit-daemon
+cloud_u+  1885  1881  0 21:11 ?        00:00:00 /usr/libexec/ibus-dconf
+cloud_u+  1888     1  0 21:11 ?        00:00:00 /usr/libexec/ibus-x11 --kill-daemon
+cloud_u+  1892     1  0 21:11 ?        00:00:00 /usr/libexec/ibus-portal
+cloud_u+  1895     1  0 21:11 ?        00:00:00 /usr/libexec/xdg-permission-store
+cloud_u+  1906     1  0 21:11 ?        00:00:00 /usr/libexec/gnome-shell-calendar-server
+root      1907     1  0 21:11 ?        00:00:00 /usr/libexec/accounts-daemon
+root      1924     1  0 21:11 ?        00:00:00 /usr/libexec/boltd
+cloud_u+  1936     1  0 21:11 ?        00:00:00 /usr/libexec/evolution-source-registry
+cloud_u+  1945     1  0 21:11 ?        00:00:00 /usr/libexec/gvfs-udisks2-volume-monitor
+root      1948     1  0 21:11 ?        00:00:00 /usr/libexec/udisks2/udisksd
+cloud_u+  1951     1  0 21:11 ?        00:00:00 /usr/libexec/goa-daemon
+cloud_u+  1982     1  0 21:11 ?        00:00:00 /usr/libexec/goa-identity-service
+cloud_u+  1990  1531  0 21:11 ?        00:00:00 /usr/libexec/gsd-power
+cloud_u+  1991  1531  0 21:11 ?        00:00:00 /usr/libexec/gsd-print-notifications
+cloud_u+  1993  1531  0 21:11 ?        00:00:00 /usr/libexec/gsd-rfkill
+cloud_u+  1997  1531  0 21:11 ?        00:00:00 /usr/libexec/gsd-screensaver-proxy
+cloud_u+  2002  1531  0 21:11 ?        00:00:01 /usr/libexec/gsd-sharing
+cloud_u+  2006  1531  0 21:11 ?        00:00:00 /usr/libexec/gsd-xsettings
+cloud_u+  2010  1531  0 21:11 ?        00:00:00 /usr/libexec/gsd-wacom
+cloud_u+  2013  1531  0 21:11 ?        00:00:00 /usr/libexec/gsd-smartcard
+cloud_u+  2016  1531  0 21:11 ?        00:00:00 /usr/libexec/gsd-sound
+cloud_u+  2019  1531  0 21:11 ?        00:00:00 /usr/libexec/gsd-account
+cloud_u+  2026  1531  0 21:11 ?        00:00:00 /usr/libexec/gsd-a11y-settings
+cloud_u+  2027  1531  0 21:11 ?        00:00:00 /usr/libexec/gsd-clipboard
+cloud_u+  2030  1531  0 21:11 ?        00:00:00 /usr/libexec/gsd-color
+cloud_u+  2033  1531  0 21:11 ?        00:00:00 /usr/libexec/gsd-datetime
+cloud_u+  2034  1531  0 21:11 ?        00:00:00 /usr/libexec/gsd-housekeeping
+cloud_u+  2037  1531  0 21:11 ?        00:00:00 /usr/libexec/gsd-keyboard
+cloud_u+  2039  1531  0 21:11 ?        00:00:00 /usr/libexec/gsd-media-keys
+cloud_u+  2045  1531  0 21:11 ?        00:00:00 /usr/libexec/gsd-mouse
+cloud_u+  2067     1  0 21:11 ?        00:00:00 /usr/libexec/gsd-printer
+colord    2099     1  0 21:11 ?        00:00:00 /usr/libexec/colord
+cloud_u+  2105  1638  0 21:11 ?        00:00:00 /usr/libexec/gvfsd-trash --spawner :1.6 /org/gtk/gvfs/exec_spaw/0
+cloud_u+  2131     1  0 21:11 ?        00:00:00 /usr/libexec/evolution-calendar-factory
+cloud_u+  2138  1531  0 21:11 ?        00:00:00 /usr/libexec/tracker-extract
+cloud_u+  2141  1531  0 21:11 ?        00:00:00 /usr/libexec/tracker-miner-apps
+cloud_u+  2147  1531  0 21:11 ?        00:00:00 /usr/libexec/tracker-miner-user-guides
+cloud_u+  2157  1531  0 21:11 ?        00:00:00 /usr/libexec/tracker-miner-fs
+cloud_u+  2170     1  0 21:11 ?        00:00:00 /usr/libexec/tracker-store
+cloud_u+  2188  2131  0 21:11 ?        00:00:00 /usr/libexec/evolution-calendar-factory-subprocess --factory all --bus-name org.gnome.evolution.dataserver.Subprocess.Backend.Calendarx2131x2 --own-path /org/gnome/evolution/dataserver/Subprocess/Backend/Calendar/2131/2
+cloud_u+  2201     1  0 21:11 ?        00:00:00 /usr/libexec/dconf-service
+cloud_u+  2202     1  0 21:11 ?        00:00:00 /usr/libexec/evolution-addressbook-factory
+cloud_u+  2221  1881  0 21:11 ?        00:00:00 /usr/libexec/ibus-engine-simple
+cloud_u+  2251  2202  0 21:11 ?        00:00:00 /usr/libexec/evolution-addressbook-factory-subprocess --factory all --bus-name org.gnome.evolution.dataserver.Subprocess.Backend.AddressBookx2202x2 --own-path /org/gnome/evolution/dataserver/Subprocess/Backend/AddressBook/2202/2
+cloud_u+  2300  1638  0 21:11 ?        00:00:00 /usr/libexec/gvfsd-burn --spawner :1.6 /org/gtk/gvfs/exec_spaw/1
+cloud_u+ 13863  2383  0 23:24 pts/0    00:00:00 grep --color=auto libexec
+[cloud_user@93d7e4261e1c Shell-scripting]$ ps -ef | grep "libexec" | awk -F" " '{print $8}'
+/sbin/dhclient
+/sbin/dhclient
+/usr/libexec/postfix/master
+/usr/libexec/gnome-session-binary
+/usr/libexec/at-spi-bus-launcher
+/usr/libexec/at-spi2-registryd
+/usr/libexec/gvfsd
+/usr/libexec/upowerd
+/usr/libexec/rtkit-daemon
+/usr/libexec/ibus-dconf
+/usr/libexec/ibus-x11
+/usr/libexec/ibus-portal
+/usr/libexec/xdg-permission-store
+/usr/libexec/gnome-shell-calendar-server
+/usr/libexec/accounts-daemon
+/usr/libexec/boltd
+/usr/libexec/evolution-source-registry
+/usr/libexec/gvfs-udisks2-volume-monitor
+/usr/libexec/udisks2/udisksd
+/usr/libexec/goa-daemon
+/usr/libexec/goa-identity-service
+/usr/libexec/gsd-power
+/usr/libexec/gsd-print-notifications
+/usr/libexec/gsd-rfkill
+/usr/libexec/gsd-screensaver-proxy
+/usr/libexec/gsd-sharing
+/usr/libexec/gsd-xsettings
+/usr/libexec/gsd-wacom
+/usr/libexec/gsd-smartcard
+/usr/libexec/gsd-sound
+/usr/libexec/gsd-account
+/usr/libexec/gsd-a11y-settings
+/usr/libexec/gsd-clipboard
+/usr/libexec/gsd-color
+/usr/libexec/gsd-datetime
+/usr/libexec/gsd-housekeeping
+/usr/libexec/gsd-keyboard
+/usr/libexec/gsd-media-keys
+/usr/libexec/gsd-mouse
+/usr/libexec/gsd-printer
+/usr/libexec/colord
+/usr/libexec/gvfsd-trash
+/usr/libexec/evolution-calendar-factory
+/usr/libexec/tracker-extract
+/usr/libexec/tracker-miner-apps
+/usr/libexec/tracker-miner-user-guides
+/usr/libexec/tracker-miner-fs
+/usr/libexec/tracker-store
+/usr/libexec/evolution-calendar-factory-subprocess
+/usr/libexec/dconf-service
+/usr/libexec/evolution-addressbook-factory
+/usr/libexec/ibus-engine-simple
